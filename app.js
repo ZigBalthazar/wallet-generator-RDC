@@ -32,11 +32,11 @@ app.get('/',(req,res)=>{
     value: ethers.utils.parseEther(amountInEther)
   }
   // Send a transaction
-  // sender.sendTransaction(tx)
-  // .then((txObj) => {
-  //   console.log('txHash', txObj.hash)
+  sender.sendTransaction(tx)
+  .then((txObj) => {
+    console.log('txHash', txObj.hash)
   
-  // })
+  })
   
   let ID = parseInt(fs.readFileSync('./id.txt','utf8'))
   fs.writeFileSync('./id.txt',String(ID+1))
@@ -61,5 +61,4 @@ app.get('/',(req,res)=>{
 
 
 app.listen(5500)
-
 
