@@ -56,22 +56,10 @@ app.get('/',(req,res)=>{
   
 
 
-  res.sendFile(path.join(__dirname, '/a.html'))
+  res.send({message : 'Ok'})
 })
 
 
 app.listen(5500)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
